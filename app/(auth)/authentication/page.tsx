@@ -66,7 +66,8 @@ export default function Auth() {
         </div>
 
         <button className="btn bg-cyan-600 btn-sm rounded-lg text-white mb-5">
-          Verify Code
+         
+           <Link href="/ui-guide">Verify Code</Link>
         </button>
 
         <div className="text-xs text-center mb-3 text-gray-500 hover:text-cyan-400 hover:underline underline-offset-4">

@@ -263,7 +263,7 @@ const UiGuide = () => {
       ></PageTitleDescription>
 
       <div className="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="bg-card text-card-foreground flex flex-col gap-6 rounded-xl lg:col-span-2">
+        <div className="bg-card text-card-foreground flex flex-col gap-6 rounded-xl lg:col-span-2 ">
           <BasicCard
             description="Indian Admin App follows a systematic approach to UI design with consistent patterns, standardized components, and comprehensive documentation."
             title="Design System Overview"
