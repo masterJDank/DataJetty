@@ -175,36 +175,7 @@ const UiGuide = () => {
         "Icon combinations",
       ],
     },
-    {
-      title: "Buttons",
-      description: "Button variants, states, and usage examples",
-      badge: "Complete",
-      cardIcon: "Mouse",
-      link: "/ui-guide",
-      buttonName: "View Demo",
-      updatedAt: "Sept 31, 2025",
-      features: [
-        "Primary, Secondary & Destructive variants",
-        "All size options",
-        "Loading states",
-        "Icon combinations",
-      ],
-    },
-    {
-      title: "Dropdowns",
-      description: "Navbar dropdown components with consistent styling",
-      badge: "Complete",
-      cardIcon: "Calender",
-      link: "/ui-guide",
-      buttonName: "View Demo",
-      updatedAt: "Sept 31, 2025",
-      features: [
-        "Unified NavbarDropdown",
-        "Dynamic menu content",
-        "Consistent hover states",
-        "Grid layouts",
-      ],
-    },
+    
     {
       title: "Dropdowns",
       description: "Navbar dropdown components with consistent styling",
@@ -225,7 +196,7 @@ const UiGuide = () => {
       description:
         "Classic vs Modern date range interfaces with slider controls",
       badge: "Complete",
-      cardIcon: "Calender",
+      cardIcon: "Calendar",
       link: "/ui-guide",
       buttonName: "View Demo",
       updatedAt: "Sept 31, 2025",
@@ -292,7 +263,7 @@ const UiGuide = () => {
       ></PageTitleDescription>
 
       <div className="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="bg-card text-card-foreground flex flex-col gap-6 rounded-xl  lg:col-span-2">
+        <div className="bg-card text-card-foreground flex flex-col gap-6 rounded-xl lg:col-span-2">
           <BasicCard
             description="Indian Admin App follows a systematic approach to UI design with consistent patterns, standardized components, and comprehensive documentation."
             title="Design System Overview"
@@ -301,7 +272,7 @@ const UiGuide = () => {
             extensions, ensuring consistency across the entire application while
             maintaining flexibility for specific use cases."
           >
-            <div className="mt-3 flex gap-2 ">
+            <div className="mt-3 flex gap-2 flex-wrap ">
               <div className="badge badge-outline out text-xs  ">
                 React + TypeScript{" "}
               </div>
@@ -321,7 +292,7 @@ const UiGuide = () => {
           </BasicCard>
         </div>
 
-        <div className="">
+        <div className="lg:col-auto">
           <BasicCard
             description=""
             title="Quick Stats"
@@ -387,6 +358,49 @@ const UiGuide = () => {
               ))}
             </div>
           </BasicCard>
+        </div>
+
+        <div className="col-span-3 ">
+          <div className="grid grid-cols-3 gap-3">
+            
+              <BasicCard
+                title="Getting Started"
+                description="Quick reference for implementing components and following design patterns"
+                titleIcon="CircleSmall"
+                subText=""
+              >
+                <div className="mt-2">
+                  <pre className="bg-gray-200 text-gray-900 p-3 rounded-md text-sm overflow-x-auto">
+                    <code>{`import { Button } from "./ui/button";`}</code>
+                  </pre>
+                </div>
+              </BasicCard>
+              <BasicCard
+                title="Follow Guidelines"
+                description="Quick reference for implementing components and following design patterns"
+                titleIcon="CircleSmall"
+                subText=""
+              >
+                <div className="mt-2">
+                  <pre className="bg-gray-200 text-gray-900 p-3 rounded-md text-sm overflow-x-auto">
+                    <code>{`<Button variant="default">`}</code>
+                  </pre>
+                </div>
+              </BasicCard>
+              <BasicCard
+                title="Test & Iterate"
+                description="Quick reference for implementing components and following design patterns"
+                titleIcon="CircleSmall"
+                subText=""
+              >
+                <div className="mt-2">
+                  <pre className="bg-gray-200 text-gray-900 p-3 rounded-md text-sm overflow-x-auto">
+                    <code>{`className="tabs-list-normal"`}</code>
+                  </pre>
+                </div>
+              </BasicCard>
+            
+          </div>
         </div>
       </div>
     </div>
