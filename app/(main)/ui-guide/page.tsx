@@ -58,7 +58,7 @@ const UiGuide = () => {
       description:
         "Comprehensive collection of stat cards, simple chart cards, and analytics cards for dashboards",
       badge: "Complete",
-      cardIcon: "Chart",
+      cardIcon: "ChartColumn",
       link: "/ui-guide",
       buttonName: "View Demo",
       updatedAt: "Sept 31, 2025",
@@ -270,7 +270,7 @@ const UiGuide = () => {
       title: "Error Pages",
       description: "View and test error page variants and states",
       badge: "Complete",
-      cardIcon: "Error",
+      cardIcon: "TriangleAlert",
       link: "/ui-guide",
       buttonName: "View Demo",
       updatedAt: "Sept 31, 2025",
@@ -292,7 +292,7 @@ const UiGuide = () => {
       ></PageTitleDescription>
 
       <div className="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="col-span-2 item">
+        <div className="bg-card text-card-foreground flex flex-col gap-6 rounded-xl  lg:col-span-2">
           <BasicCard
             description="Indian Admin App follows a systematic approach to UI design with consistent patterns, standardized components, and comprehensive documentation."
             title="Design System Overview"
@@ -343,23 +343,25 @@ const UiGuide = () => {
           </BasicCard>
         </div>
 
-        <div className="col-span-3 ">
+        <div className="col-span-3">
           <BasicCard
             title="Design System Highlights"
             description="Key principles and patterns that make our UI consistent and maintainable"
             titleIcon="Circle"
             subText=""
           >
-            <div className="mt-4 flex flex-row gap-3">
-              {designSystemHighlights.map((cardItem, index) => (
-                <BasicCard
-                  key={index}
-                  title={cardItem.title}
-                  description={cardItem.description}
-                  titleIcon={cardItem.cardIcon}
-                  subText={cardItem.subDesc}
-                />
-              ))}
+            <div className="mt-4">
+              <div className="grid grid-cols-1  xl:grid-cols-4 ld:grid-cols-4 gap-3 ">
+                {designSystemHighlights.map((cardItem, index) => (
+                  <BasicCard
+                    key={index}
+                    title={cardItem.title}
+                    description={cardItem.description}
+                    titleIcon={cardItem.cardIcon}
+                    subText={cardItem.subDesc}
+                  />
+                ))}
+              </div>
             </div>
           </BasicCard>
         </div>
@@ -370,7 +372,7 @@ const UiGuide = () => {
             titleIcon="Component"
             subText=""
           >
-            <div className="mt-4 flex flex-row gap-3">
+            <div className="mt-4 grid lg:grid-cols-2 grid-cols-1 gap-3">
               {components.map((cardItem, index) => (
                 <ComponentCard
                   badge={cardItem.badge}
@@ -378,6 +380,9 @@ const UiGuide = () => {
                   title={cardItem.title}
                   titleIcon={cardItem.cardIcon}
                   key={index}
+                  updatedAt={cardItem.updatedAt}
+                  features={cardItem.features}
+                  link={cardItem.link}
                 />
               ))}
             </div>
